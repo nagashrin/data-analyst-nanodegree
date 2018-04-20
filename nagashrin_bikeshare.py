@@ -187,7 +187,6 @@ def main():
         show_data_points_non_visual(city_data)           
         raw_data = get_raw_data(city_data)
         visualization_input = get_visualization_input()
-        charts = show_bikeshare_charts(city_data)
         restart = get_restart()
         
             
@@ -231,11 +230,11 @@ def show_data_points_non_visual(city_data):
 
 # Visualization input
 def get_visualization_input():
-    quit = input('\nDo you want to check out some cool charts? Y/N: ')
-    if quit.lower() == 'y':
-        return -1
-    else:
+    show = input('\nDo you want to check out some cool charts? Y/N: ')
+    if show.lower() == 'y':
         show_bikeshare_charts(city_data)
+    return
+
 
 
 # Visualizations
